@@ -1,10 +1,16 @@
 # first neural network with keras tutorial
+import os
+import warnings
+warnings.filterwarnings('ignore', category=DeprecationWarning)
+warnings.filterwarnings('ignore', category=FutureWarning)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 import argparse
 from numpy import loadtxt
+
 
 parser = argparse.ArgumentParser(
         description='Diabetes prediction')
